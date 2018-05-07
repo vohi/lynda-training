@@ -1,9 +1,11 @@
 package main
 
 import (
-    "fmt"
+	"fmt"
 )
 
 func main() {
-    
+	var s string
+	fmt.Scanln(&s)
+	fmt.Println(s)
 }
