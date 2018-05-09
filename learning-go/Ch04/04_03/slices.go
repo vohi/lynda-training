@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"sort"
 )
 
 func main() {
@@ -28,4 +29,7 @@ func main() {
 	numbers = append(numbers, 235)
 	fmt.Println(numbers)
 	fmt.Println(cap(numbers)) // prints 10 - go's growth strategy for slices
+
+	sort.Ints(numbers)
+	fmt.Println(numbers)
 }
