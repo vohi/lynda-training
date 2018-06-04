@@ -3,11 +3,24 @@ package main
 import "fmt"
 
 type Dog struct {
-	Breed string
+	Breed  string
 	Weight int
-	Sound string
+	Sound  string
+}
+
+func (d Dog) Speak() {
+	fmt.Println(d.Sound)
 }
 
 func main() {
+	poodle := Dog{
+		"Poodle",
+		37,
+		"Woof"}
+	fmt.Println(poodle)
 
+	poodle.Speak()
+
+	poodle.Sound = "Arf"
+	poodle.Speak()
 }
