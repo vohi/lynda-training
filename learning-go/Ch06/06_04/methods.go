@@ -8,7 +8,12 @@ type Dog struct {
 	Sound  string
 }
 
-func (d Dog) Speak() {
+func (d Dog) Speak() { // operates on a copy of the object
+	fmt.Println(d.Sound)
+}
+
+func (d *Dog) SpeakThreeTimes() { // operates on a references
+	d.Sound = fmt.Sprintf("%v! %v! %v!", d.Sound, d.Sound, d.Sound)
 	fmt.Println(d.Sound)
 }
 
@@ -23,4 +28,7 @@ func main() {
 
 	poodle.Sound = "Arf"
 	poodle.Speak()
+
+	poodle.SpeakThreeTimes()
+	poodle.SpeakThreeTimes()
 }
